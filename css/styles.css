@@ -52,6 +52,12 @@ html {
     word-spacing: 3px;
 }
 
+.sticky {
+    margin: 0 auto;
+    position: fixed;
+    z-index: 3;
+}
+
 .hero {
     background-image: url(img/silhouette-of-mountains-1323550.jpg);
     height: 100vh;
@@ -60,26 +66,40 @@ html {
 }
 
 .hero-logo {
-    display: block;
+    display: none;
     width: 20%;
     margin: 0 auto;
 }
 
 .hero-text {
-    background-color: rgba(253, 253, 253, 0.39);
-    box-shadow: 0 5px 5px #0000004d;
-    text-align: center;
-    width: 100%;
-    padding: 1rem 0;
-    margin: 0 auto;
+    /*color: #fff;*/
+    text-align: left;
+    width: 70%;
+    padding: 15vh 10%;
 }
 
-header h1 { /* Cambiarle fuente al heading del hero*/
-    font-family: 'Lato', 'Arial', sans-serif;
+.btn-box {
+    display: block;
+    width: 100%;
+    margin-left: 10%;
+}
+
+.hero a {
+    display: block;
+    float: left;
+    padding: 15px;
+    width: 10rem;
+    font-size: 110%;
+    text-align: center;
+    margin: 0 20px;
 }
 
 header h2:after {
     display: none;
+}
+
+header h2 {
+    margin-left: 10px;
 }
 
 h2:after {
@@ -106,6 +126,9 @@ h2:after {
 */
 
 h1 {
+    font-family: 'Lato', 'Arial', sans-serif;
+    margin-bottom: 40px;
+    font-size: 280%;
     margin: 0;
     letter-spacing: 3px;
 }
@@ -253,7 +276,7 @@ cite img {
       border-radius: 30px;
       display: block;
       margin: 0 auto;
-      margin-top: 3rem;
+      margin-top: 2rem;
       padding: 2rem;
       color: rgb(255, 255, 255);
       width: 30%;
@@ -291,10 +314,12 @@ cite img {
 
   .btn-free {
     background-color: #ff9b60;
+    border: 2px solid #ff9b60;
   }
 
   .btn-ebook {
     background-color: #58ac94;
+    border: 2px solid #58ac94;
   }
 
   .btn-interested {
@@ -303,6 +328,7 @@ cite img {
   }
 
   .btn-book:active,
+  .btn-book:link,
   .btn-book:visited {
       color: #ff9b60;
   }
@@ -315,12 +341,27 @@ cite img {
   }
 
   .btn-interested:active,
+  .btn-interested:link,
   .btn-interested:visited {
     color: #58ac94;
   }
 
-  .btn-ebook {
-    color: #58ac94;
+  .btn-book:hover, .btn-book:active,
+  .btn-free:hover, .btn-free:active,
+  input[type=submit]:hover,
+  input[type=submit]:active {
+    background: #e97a31;
+    color: #fff;
+    border: 2px solid #e97a31;
+    transition: background 0.4s, border 0.4s;
+  }
+
+  .btn-interested:hover, .btn-interested:active,
+  .btn-ebook:hover, .btn-ebook:active {
+    background: #3f7c6b;
+    color: #fff;
+    border: 2px solid #3f7c6b;
+    transition: background 0.4s, border 0.4s;
   }
 
   .services-grid {
@@ -409,8 +450,8 @@ cite img {
     text-decoration: none;
     border-radius: 200px;
     color: #fff;
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
+    background-color: #ff9b60;
+    border: 2px solid #ff9b60;
     margin-right: 15px;
     }
 
@@ -431,6 +472,146 @@ cite img {
   .testimonial-card {
       padding: 0 2rem;
   }
+
+  /*SLIDER*/
+
+  #slider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+ }
+ #slider input[type=radio] {
+    display: none;
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+     /*line-height: 0;*/
+    height: 300px;
+ }
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+ }
+
+ .slide-content {
+     padding: 30px;
+ }
+
+ #slides .slide_1 {
+    background: #00171F;;
+ }
+ #slides .slide_2 {
+    background: #003459;
+ }
+ #slides .slide_3 {
+    background: #007EA7;
+ }
+ #slides .slide_4 {
+    background: #00A8E8;
+ }
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #slide1:checked ~ #controls label:nth-child(2),
+ #slide2:checked ~ #controls label:nth-child(3),
+ #slide3:checked ~ #controls label:nth-child(4),
+ #slide4:checked ~ #controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #slide1:checked ~ #controls label:nth-last-child(1),
+ #slide2:checked ~ #controls label:nth-last-child(4),
+ #slide3:checked ~ #controls label:nth-last-child(3),
+ #slide4:checked ~ #controls label:nth-last-child(2) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
 
   /*
     Footer
