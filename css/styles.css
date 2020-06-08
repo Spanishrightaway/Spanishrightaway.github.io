@@ -166,6 +166,14 @@ cite img {
         width: 2rem;
 }
 
+/*
+    Animations
+*/
+
+.js--wp-4 {
+            animation-duration: 1s;
+}
+
 
 
   /*

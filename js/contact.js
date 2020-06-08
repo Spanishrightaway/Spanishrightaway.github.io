@@ -16,6 +16,11 @@ $('#ebook').click(function(){
     textbox.value = 'Hey! I\'m interested in the Ebook, resources and promotions.';
 });
 
+$('#btnFreeClass').click(function(){
+    subject = 'Classes - Booking for Free class';
+    textbox.value = 'Hey! I\'m interested in booking  a free class, I would like to more info and what\'s next.';
+});
+
 $('#bookFreeClass').click(function(){
     subject = 'Classes - Booking for Free class';
     textbox.value = 'Hey! I\'m interested in booking  a free class, I would like to more info and what\'s next.';
