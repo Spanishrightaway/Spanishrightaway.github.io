@@ -322,6 +322,11 @@ cite img {
     font-size: 100%;
     border-radius: 25px;
   }
+
+  #bookFreeClass {
+      width: 80%;
+  }
+
   .btn-book {
     color: #ff9b60;
     border: 2px solid #ff9b60;
