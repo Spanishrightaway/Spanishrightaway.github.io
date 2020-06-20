@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="third-party/css/animate.css">
 
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/queries.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400&display=swap" rel="stylesheet">
 </head>
 
@@ -18,21 +19,26 @@
     <header>
         <div class="hero">
             <nav class="main-nav">
-                <ul class="nav-options">
+                <ul class="nav-options js--main-nav">
                     <li><a id="nav_about" href="#about">About</a></li>
-                    <li><a id="nav_services" href="#services">Our services</a></li>
+                    <li><a id="nav_services" href="#services">Services</a></li>
                     <li><a id="nav_community" href="#community">Community</a></li>
                     <li><a id="nav_contact" href="#contact">Contact</a></li>
                 </ul>
+                <a class="mobile-nav-icon  --js-nav-icon"><i class="ion-navicon-round"></i></a>
             </nav>
             <div id="home" class="hero-text">
                 <h1>Spanish Right Away</h1>
                 <h2>A safe space for you to learn &amp; connect</h2>
+                <div class="btn-box">
+                    <a href="#services" id="btnServices" class="btn-free">Our services</a> <a href="#contact"
+                        id="btnFreeClass" class="btn-ebook">Take a free
+                        class</a>
+                </div>
             </div>
-            <div class="btn-box">
-                <a href="#services" class="btn-free">Our services</a> <a href="#contact" id="btnFreeClass" class="btn-ebook">Take a free
-                    class</a>
-            </div>
+            <!--
+                
+            -->
         </div>
     </header>
     <div class="container">
@@ -66,8 +72,6 @@
                         </p>
                     </div>
                 </div>
-
-                <img src="content/images to cut/daniel-vargas-Csn2LCZqGWs-unsplash.jpg" alt="">
             </div>
 
         </section>
@@ -83,11 +87,11 @@
                     <img src="img/data.jpg" alt="Courtesy class" class="service-image">
                     <h4>101</h4>
                     <p>
-                        Book classes according to your needs.
+                        Book classes according to your needs.<br><br>
                     </p>
                     <ul>
                         <li>20$ for a single private lesson.</li>
-                        <li>15$ per class when you get a package.</li>
+                        <li>15$ per class when you get a package.<br><br></li>
                     </ul>
                     <a id="book101" href="#contact" class="btn-book">Book service</a>
                 </div>
@@ -111,7 +115,7 @@
                     </p>
                     <ul>
                         <li>25$ for a single lesson for couples.</li>
-                        <li>16$ per class when you get a package.</li>
+                        <li>16$ per class when you get a package.<br><br></li>
                     </ul>
                     <a id="bookMedellin" href="#contact" class="btn-book">Book service</a>
                 </div>
@@ -139,9 +143,9 @@
                         Intensive preparation on-demand.
                     </p>
                     <ul>
-                        <li>101: $240.</li>
-                        <li>Conecta: 192 each student.</li>
-                        <li>Medell&iacute;n: 128 each student.</li>
+                        <li>101: $240.<br><br></li>
+                        <li>Conecta: 192 each student.<br><br><br></li>
+                        <li>Medell&iacute;n: 128 each student.<br><br></li>
                     </ul>
                     <a id="bookIlimitado" href="#contact" class="btn-interested">I'm interested</a>
 
@@ -170,7 +174,7 @@
                     </p>
                     <ul>
                         <li>Four class package for private student (101): $150.</li>
-                        <li>Four class package for a 4 people group(Conecta): $120 each student.</li>
+                        <li>Four class package for a 4 people group(Conecta): $120 each student.<br><br></li>
                         <li>Four class package for a couple (Medell&iacute;n): $80 each student.</li>
                     </ul>
                     <a id="bookCaracas" href="#contact" class="btn-interested">I'm interested</a>
@@ -187,7 +191,6 @@
                 <a id="ebook" href="#contact" class="btn-ebook">Get it now</a>
             </div>
         </section>
-
         <section id="community" class="testimonial-section">
             <h2>Meet our community</h2>
             <div id="slider">
@@ -243,7 +246,6 @@
                     <label for="slide4"></label>
                 </div>
             </div>
-
         </section>
 
         <section id="contact" class="contact-section">
@@ -280,6 +282,7 @@
                     data-callback='onSubmit' data-action='submit' value="Send It">
             </form>
         </section>
+
     </div>
     <footer>
         <div class="footer-box">

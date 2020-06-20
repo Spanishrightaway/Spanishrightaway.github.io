@@ -42,6 +42,49 @@ $('.js--wp-4').waypoint(function(direction) {
   offset: '80%'
 });
 
+// Mobile
+
+function mobileNavReset() {
+  let nav = $('.js--main-nav');
+  let icon = $('.--js-nav-icon i');
+
+  if($(window).width() > 768) {
+     return; 
+  }
+
+  nav.slideToggle(200);
+  /* switch from hamburger to cross icon */
+  if (icon.hasClass('ion-navicon-round')) {
+      nav.css({
+          "display": "block"
+      })
+      icon.addClass('ion-close-round');
+      icon.removeClass('ion-navicon-round');
+  } else {
+      icon.addClass('ion-navicon-round');
+      icon.removeClass('ion-close-round');
+  }
+}
+
+/* Mobile Navigation */
+$('.--js-nav-icon').click(function () {
+  let nav = $('.js--main-nav');
+  let icon = $('.--js-nav-icon i');
+
+  nav.slideToggle(200);
+  /* switch from hamburger to cross icon */
+  if (icon.hasClass('ion-navicon-round')) {
+      nav.css({
+          "display": "block"
+      })
+      icon.addClass('ion-close-round');
+      icon.removeClass('ion-navicon-round');
+  } else {
+      icon.addClass('ion-navicon-round');
+      icon.removeClass('ion-close-round');
+  }
+});
+
 // Natural offset for fixed navbar.
 
 (function(document, history, location) {
