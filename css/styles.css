@@ -24,6 +24,21 @@ html {
     font-size: 21px;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    /*max-width: 100%;*/
+    /*overflow-x: hidden;*/
 }
 
 /*
@@ -52,23 +67,27 @@ html {
     word-spacing: 3px;
 }
 
+
+.mobile-nav-icon {
+    display: none;
+}
+
 .sticky {
+    background-color: rgba(173, 210, 219, 0.7);
+    width: 100%;
+    padding: 0px 0;
     margin: 0 auto;
     position: fixed;
     z-index: 3;
+    transition: background-color 0.2s;
 }
 
 .hero {
     background-image: url(img/silhouette-of-mountains-1323550.jpg);
     height: 100vh;
+    width: 100%;
     background-size: cover;
     background-attachment: fixed;
-}
-
-.hero-logo {
-    display: none;
-    width: 20%;
-    margin: 0 auto;
 }
 
 .hero-text {
@@ -81,11 +100,21 @@ html {
 .btn-box {
     display: block;
     width: 100%;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-top: 80px;
 }
 
-.hero a {
-    display: block;
+ #btnFreeClass,
+ #btnServices {
+     margin-top: 0;
+     width: 250px;
+     display: inline-block;
+     margin-left: 20px;
+     text-align: center;
+     font-size: 120%;
+ }
+
+.main-nav a {
     float: left;
     padding: 15px;
     width: 10rem;
@@ -94,11 +123,18 @@ html {
     margin: 0 20px;
 }
 
+
+
+
 header h2:after {
     display: none;
 }
 
 header h2 {
+    font-size: 150%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin-top: 15px;
     margin-left: 10px;
 }
 
@@ -132,6 +168,9 @@ h1 {
     margin: 0;
     letter-spacing: 3px;
 }
+ h2 {
+     font-size: 180%;
+ }
 
 p {  margin-top: 0.6em; margin-bottom: 0em; }
 
@@ -163,6 +202,14 @@ cite img {
         width: 2rem;
 }
 
+/*
+    Animations
+*/
+
+.js--wp-4 {
+            animation-duration: 1s;
+}
+
 
 
   /*
@@ -175,24 +222,14 @@ cite img {
     About section
   */
 
+  .about-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)), url(img/daniel-vargas-Csn2LCZqGWs-unsplash.jpg);
+    background-size: cover;
+  }
+
   .overlap-box:nth-child(1) {
        width: 100%;
-       display: grid;
-       grid-template-columns: 2fr;
-       grid-template-rows: repeat(10, 4.75rem);
-
-  }
-
-  .overlap-box h2 {
-      grid-column: 1 / 3;
-      grid-row: 1;
-  }
-
-  .overlap-box img {
-      /*width: 80%;*/
-      height: 100%;
-      display: block;
-      margin: 0 auto;
+       background-image: url(content/images to cut/daniel-vargas-Csn2LCZqGWs-unsplash.jpg);
   }
 
   .overlap-box img:nth-child(4) {
@@ -203,29 +240,18 @@ cite img {
   }
 
   .module-wrapper {
-    width: 90%;
     padding: 3px;
     position: relative;
     background: linear-gradient(to right, #7bebcb, #ff9b60);
     margin: 0 auto;
+    margin-top: 2rem;
+    width: 100%;
   }
 
-  .module-wrapper:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -5px;
-   /* !importanté */
-    border-radius: inherit;
-   /* !importanté */
-    background: linear-gradient(to right, red, orange);
+  .module-wrapper:last-of-type {
+      margin-top: 60px;
+      margin-bottom: 60px;
   }
-
-  
   
   .module {
     background: rgb(255, 255, 255);
@@ -233,17 +259,6 @@ cite img {
     height: 100%;
     padding: 2rem;
     margin: 0 auto;
-  }
-
-  .module-wrapper:nth-child(2) {
-    grid-column: 1 / 3;
-    grid-row: 3 / 5;
-  }
-
-  .module-wrapper:nth-child(3) {
-    height: 100%;
-    grid-column: 1 / 3;
-    grid-row: 7 / 9;
   }
 
   .overlap-box:nth-child(4) {
@@ -260,11 +275,17 @@ cite img {
     Services section
   */
 
+  .about-section,
   .services-section,
   .packages-section {
       padding: 2rem;
       border-radius: 50px;
       background-color: #f5f5f5;
+  }
+
+  .services-section a,
+  .packages-section a {
+    font-size: 110%;
   }
 
   .services-section {
@@ -301,6 +322,11 @@ cite img {
     font-size: 100%;
     border-radius: 25px;
   }
+
+  #bookFreeClass {
+      width: 80%;
+  }
+
   .btn-book {
     color: #ff9b60;
     border: 2px solid #ff9b60;
@@ -455,23 +481,14 @@ cite img {
     margin-right: 15px;
     }
 
+    .g-recaptcha {
+        grid-row: 6;
+        grid-column: 2;
+    }
+
   /*
     Testimonial section
   */
-
-  .testimonial-box {
-      margin-top: 2rem;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);    
-      background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(img/white-laptop-1181406.jpg);
-      background-size: cover;
-      color: #fff;
-      background-attachment: fixed;
-  }
-
-  .testimonial-card {
-      padding: 0 2rem;
-  }
 
   /*SLIDER*/
 
@@ -498,6 +515,11 @@ cite img {
  #overflow {
     width: 100%;
     overflow: hidden;
+ }
+ .inner {
+     margin: 0px;
+     padding: 0;
+     overflow: hidden;
  }
  #slide1:checked ~ #slides .inner {
     margin-left: 0;
@@ -618,6 +640,7 @@ cite img {
   */
 
   footer {
+      width: 100%;
       background-color: rgb(59, 59, 59);
       color: #fff;
       padding: 40px;
@@ -683,7 +706,7 @@ cite img {
 
 .ion-social-facebook,
 .ion-social-twitter,
-.ion-social-googleplus,
+.ion-social-google,
 .ion-social-instagram {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -697,14 +720,19 @@ cite img {
     color: #00aced;
 }
 
-.ion-social-googleplus:hover {
+.ion-social-google:hover {
     color: #dd4b39;
 }
 
 .ion-social-instagram:hover {
     color: #517fa4;
 }
-
-
+/*
+* {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  }
+  */
 
 
