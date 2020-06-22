@@ -251,6 +251,25 @@
 
 }
 
+@media only screen and (max-width: 410px) {
+
+    form {
+        margin: 0 auto;
+    }
+    .form-grid {
+        margin: 0;
+        margin-top: 30px;
+        margin-left: 30px;
+        gap: 10px;
+        grid-template-columns: 70px 195px;
+        font-size: 80%;
+    }
+
+    .g-recaptcha {
+        grid-column: 1;
+    }
+}
+
 @media only screen and (max-width: 365px) {
 
     form {
@@ -263,12 +282,6 @@
         grid-template-columns: 50px 195px;
         font-size: 80%;
     }
-    /*
-    .social-links ul{
-        display: block;
-        margin-left: 20%;
-    }
-    */
 
     .g-recaptcha {
         grid-column: 1;

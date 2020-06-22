@@ -1,6 +1,7 @@
 
 // Google reCaptcha.
 
+/*
 function onSubmit(token) {
     alert('Your contact message was successfully sent.');
     document.getElementById('submit').submit();
@@ -8,6 +9,30 @@ function onSubmit(token) {
 
 const textbox = document.getElementById('message');
 let subject = 'Information';
+*/
+
+// Gmail alert
+
+const gmail = $('#gmail');
+
+gmail.click(event => {
+    event.preventDefault();
+    alert('Contact us through spanishrightaway@gmail.com');
+})
+
+// Submit 
+
+const contactForm = $('form[name="contact"]');
+    contactForm.on('submit', (event) => {
+    event.preventDefault();
+    postContact();
+});
+
+function postContact() {
+    console.log('lo logramos compa');
+    
+
+};
 
 //Free stuff
 
