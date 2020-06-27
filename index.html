@@ -36,6 +36,8 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/queries.css">
+
+    <script defer src="js/privacy.js"></script>
 </head>
 
 <body>
@@ -295,7 +297,7 @@
                     <label for="email">E-book and Newsletter</label>
                     <div>
                         <input type="checkbox" name="news" id="news" checked=""> Yes, pleace (you can unsubscribe
-                        anythime you want, check our <a href="#">Privacy Policy</a>)
+                        anythime you want, check our <a id = "privacy" data-modal-target="#modal" href="#">Privacy Policy</a>)
                     </div>
                     <label for="email">Drop us a line</label>
                     <textarea name="message" id="message" cols="30" rows="3" placeholder="Your message"></textarea>
@@ -308,7 +310,51 @@
                 <input id="submit" type="submit" data-action='submit' value="Send It">
             </form>
         </section>
+  </div>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Our policy</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Your privacy is important to us. It is Spanish Right Away's policy to respect your privacy regarding any
+        information we may collect from you across our website, https://spanishrightaway.github.io/.
+      </p>
+      <p>
+        We only ask for personal information when we truly need it to provide a service to you. We collect it by fair and
+      lawful means, with your knowledge and consent. We also let you know why we’re collecting it and how it will be
+      used.
+      </p>
+      <p>
+        We only retain collected information for as long as necessary to provide you with your requested service. What
+      data we store, we’ll protect within commercially acceptable means to prevent loss and theft, as well as
+      unauthorized access, disclosure, copying, use or modification.
+      </p>
+      <p>
+        We don’t share any personally identifying information publicly or with third-parties, except when required to by
+      law.
+      </p>
+      <p>
+        Our website may link to external sites that are not operated by us. Please be aware that we have no control over
+      the content and practices of these sites, and cannot accept responsibility or liability for their respective
+      privacy policies.
+      </p>
+      <p>
+        You are free to refuse our request for your personal information, with the understanding that we may be unable to
+        provide you with some of your desired services.
+      </p>
+      <p>
+        Your continued use of our website will be regarded as acceptance of our practices around privacy and personal
+        information. If you have any questions about how we handle user data and personal information, feel free to
+        contact us.
+      </p>
+      <p>
+        This policy is effective as of 30 July 2021.
+      </p>
 
+    </div>
+  <!--<div id="overlay"></div>-->
     </div>
     <footer>
         <div class="footer-box">

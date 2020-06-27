@@ -7,9 +7,9 @@ function onSubmit(token) {
     document.getElementById('submit').submit();
   }
 
+*/
 const textbox = document.getElementById('message');
 let subject = 'Information';
-*/
 
 // Gmail alert
 
