@@ -445,6 +445,7 @@ cite img {
   .form-grid {
       width: 60%;
       margin: 60px auto;
+      margin-bottom: 30px;
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 1rem;
@@ -473,12 +474,26 @@ cite img {
     color: #fff;
     background-color: #ff9b60;
     border: 2px solid #ff9b60;
-    margin-right: 15px;
     }
 
     .g-recaptcha {
-        grid-row: 6;
+        grid-row: 7;
         grid-column: 2;
+    }
+
+    .response-output {
+      display: block;
+      display: none;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .failed {
+      color: red;
     }
 
   /*
