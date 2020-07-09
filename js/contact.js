@@ -9,7 +9,7 @@ function onSubmit(token) {
 
 */
 const textbox = document.getElementById('message');
-const serverUrl = 'Http://localhost:8080/spanishrightaway/contact/';
+const serverUrl = 'http://ec2-18-189-157-80.us-east-2.compute.amazonaws.com:8080/spanishrightaway/contact/';
 let subject = 'Information';
 let contactMail = 'spanishrightaway@gmail.com';
 
