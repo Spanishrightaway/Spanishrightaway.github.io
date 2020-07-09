@@ -66,6 +66,8 @@ function postContact(value) {
 
     console.log('postContact() was called');
 
+    checkContent(contactRequest.message);
+
     let contactRequest = {
         name: value.elements['name'].value,
         lastName: value.elements['lastName'].value,
@@ -75,8 +77,6 @@ function postContact(value) {
         subject: subject,
         message: value.elements['message'].value
     };
-
-    checkContent(contactRequest.message);
 
     sendHttpRequest('POST', serverUrl, contactRequest)
         .then(responseData => {
